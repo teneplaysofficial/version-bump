@@ -46,5 +46,22 @@ export function createGitTag(
    */
   options: GitConfig = {
     fullTag: true,
+    commitMessage: 'chore: release v',
   },
-) {}
+) {
+  if (options.fullTag) {
+    spawnSync('git', ['tag', version]);
+  }
+
+  if (options.major) {
+    const majorVersion = version.split('.')[0];
+    spawnSync('git', ['tag', majorVersion]);
+  }
+
+  if (options.minor) {
+    const minorVersion = version.split('.')[0][1];
+    spawnSync('git', ['tag', minorVersion]);
+  }
+
+  spawnSync('git', ['push', '--follow-tags']);
+}

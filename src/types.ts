@@ -32,7 +32,7 @@ export interface GitConfig {
    * @example
    * `v1.2.3`
    *
-   * @defaultValue `true`
+   * @default true
    */
   fullTag?: boolean;
   /**
@@ -53,4 +53,10 @@ export interface GitConfig {
    * Force push tags even if they already exist remotely.
    */
   forcePush?: boolean;
+  /**
+   * Commit message
+   *
+   * @default "chore: release v1.0.0"
+   */
+  commitMessage?: string;
 }
