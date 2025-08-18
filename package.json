@@ -40,6 +40,9 @@
       }
     }
   },
+  "bin": {
+    "@tenedev/version-bump": "./dist/cli/index.cjs"
+  },
   "engines": {
     "node": ">=20"
   },
