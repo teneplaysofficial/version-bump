@@ -23,7 +23,8 @@ export type PreReleaseTypes =
   | 'canary'
   | 'nightly'
   | 'test'
-  | 'experimental';
+  | 'experimental'
+  | null;
 
 export interface GitConfig {
   /**
@@ -34,7 +35,7 @@ export interface GitConfig {
    *
    * @default true
    */
-  fullTag?: boolean;
+  fullTag: boolean;
   /**
    * Create a major-only tag.
    *
@@ -50,13 +51,16 @@ export interface GitConfig {
    */
   minor?: boolean;
   /**
-   * Force push tags even if they already exist remotely.
-   */
-  forcePush?: boolean;
-  /**
    * Commit message
    *
    * @default "chore: release v1.0.0"
    */
-  commitMessage?: string;
+  commitMessage: string;
+}
+
+export enum VersionFiles {
+  npm = 'package.json',
+  jsr = 'jsr.json',
+  deno = 'deno.json',
+  lock = 'package-lock.json',
 }
