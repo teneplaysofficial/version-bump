@@ -11,5 +11,5 @@
     "importHelpers": true,
     "isolatedModules": true
   },
-  "include": ["src"]
+  "include": ["src", "bin", "tests"]
 }
