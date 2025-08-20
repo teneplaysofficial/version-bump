@@ -1,6 +1,6 @@
 {
   "name": "@tenedev/version-bump",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Update project version and create tag easily",
   "repository": "https://github.com/teneplaysofficial/version-bump",
   "author": "Sriman <136729116+TenEplaysOfficial@users.noreply.github.com>",
